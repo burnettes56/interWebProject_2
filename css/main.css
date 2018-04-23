@@ -1,43 +1,21 @@
-body {
-    background-color: #222222;
-    background: repeating-linear-gradient(45deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
+@import url('https://fonts.googleapis.com/css?family=Nixie+One');
+
+body, html {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: table;
 }
 
-#container {
-    width: 500px;
-    margin: auto;
-}
-
-/*Neon*/
-p {
+div {
+    display: table-cell;
     text-align: center;
-    font-size: 7em;
-    margin: 20px 0 20px 0;
+    vertical-align: middle;
 }
 
-a {
-    text-decoration: none;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
-}
-
-p:nth-child(1) a {
-    color: #fff;
-    font-family: Monoton;
-    -webkit-animation: neon 1.5s ease-in-out infinite alternate;
-    -moz-animation: neon 1.5s ease-in-out infinite alternate;
-    animation: neon 1.5s ease-in-out infinite alternate;
-}
-
-p:nth-child(1) a:hover {
-    color: #FF1177;
-    -webkit-animation: none;
-    -moz-animation: none;
-    animation: none;
-}
-p a:hover {
-    color: #ffffff;
+html {
+    background-color: #222222;
+    background: repeating-linear-gradient(75deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
 }
 /*glow for webkit*/
 
@@ -46,7 +24,7 @@ p a:hover {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
     }
     to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+        text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 32px #FF1177, 0 0 55px #FF1177, 0 0 60px #FF1177, 0 0 75px #FF1177, 0 0 110px #FF1177;
     }
 }
 /*glow for mozilla*/
@@ -56,7 +34,7 @@ p a:hover {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
     }
     to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
+        text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 32px #FF1177, 0 0 55px #FF1177, 0 0 60px #FF1177, 0 0 75px #FF1177, 0 0 110px #FF1177;
     }
 }
 /*glow*/
@@ -66,14 +44,6 @@ p a:hover {
         text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
     }
     to {
-        text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #FF1177, 0 0 35px #FF1177, 0 0 40px #FF1177, 0 0 50px #FF1177, 0 0 75px #FF1177;
-    }
-}
-@media (max-width: 650px) {
-    #container {
-        width: 100%;
-    }
-    p {
-        font-size: 3.5em;
+        text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 32px #FF1177, 0 0 55px #FF1177, 0 0 60px #FF1177, 0 0 75px #FF1177, 0 0 110px #FF1177;
     }
 }
