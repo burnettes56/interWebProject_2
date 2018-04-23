@@ -14,36 +14,107 @@ div {
 }
 
 html {
-    background-color: #222222;
-    background: repeating-linear-gradient(75deg, #2b2b2b 0%, #2b2b2b 10%, #222222 0%, #222222 50%) 0 / 15px 15px;
 }
+
 /*glow for webkit*/
 
 @-webkit-keyframes neon {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+        text-shadow: 0 0 6px #fff,
+        0 0 12px #fff,
+        0 0 14px #fff,
+        0 0 24px #ffd85b,
+        0 0 44px #ffd85b,
+        0 0 50px #ffd85b,
+        0 0 68px #ffd85b,
+        0 0 84px #ffd85b;
     }
     to {
-        text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 32px #FF1177, 0 0 55px #FF1177, 0 0 60px #FF1177, 0 0 75px #FF1177, 0 0 110px #FF1177;
+        text-shadow: 0 0 3px #fff,
+        0 0 5px #fff,
+        0 0 11px #fff,
+        0 0 19px #ffd85b,
+        0 0 36px #ffd85b,
+        0 0 40px #ffd85b,
+        0 0 50px #ffd85b,
+        0 0 64px #ffd85b;
     }
 }
+
+@-webkit-keyframes off {
+    from {
+        text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
 /*glow for mozilla*/
 
 @-moz-keyframes neon {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+        text-shadow: 0 0 6px #fff,
+        0 0 12px #fff,
+        0 0 14px #fff,
+        0 0 24px #ffd85b,
+        0 0 44px #ffd85b,
+        0 0 50px #ffd85b,
+        0 0 68px #ffd85b,
+        0 0 84px #ffd85b;
     }
     to {
-        text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 32px #FF1177, 0 0 55px #FF1177, 0 0 60px #FF1177, 0 0 75px #FF1177, 0 0 110px #FF1177;
+        text-shadow: 0 0 5px #fff,
+        0 0 9px #fff,
+        0 0 11px #fff,
+        0 0 19px #ffd85b,
+        0 0 36px #ffd85b,
+        0 0 40px #ffd85b,
+        0 0 50px #ffd85b,
+        0 0 64px #ffd85b;
     }
 }
+
+@-moz-keyframes off {
+    from {
+        text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
 /*glow*/
 
 @keyframes neon {
     from {
-        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #FF1177, 0 0 70px #FF1177, 0 0 80px #FF1177, 0 0 100px #FF1177, 0 0 150px #FF1177;
+        text-shadow: 0 0 6px #fff,
+        0 0 12px #fff,
+        0 0 14px #fff,
+        0 0 24px #ffd85b,
+        0 0 44px #ffd85b,
+        0 0 50px #ffd85b,
+        0 0 68px #ffd85b,
+        0 0 84px #ffd85b;
     }
     to {
-        text-shadow: 0 0 7px #fff, 0 0 15px #fff, 0 0 20px #fff, 0 0 32px #FF1177, 0 0 55px #FF1177, 0 0 60px #FF1177, 0 0 75px #FF1177, 0 0 110px #FF1177;
+        text-shadow: 0 0 5px #fff,
+        0 0 9px #fff,
+        0 0 11px #fff,
+        0 0 19px #ffd85b,
+        0 0 36px #ffd85b,
+        0 0 40px #ffd85b,
+        0 0 50px #ffd85b,
+        0 0 64px #ffd85b;
     }
 }
+
+@keyframes off {
+    from {
+        text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+    to {
+        text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
+    }
+}
+
