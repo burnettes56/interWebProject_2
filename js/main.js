@@ -2,7 +2,13 @@ $(document).ready(function () {
     var divText = $("#1").text(),
         newText = '',
         css = document.styleSheets[0],
-        chars = new Array(divText.length);
+        chars = new Array(divText.length),
+        counter = 0,
+        randLetter,
+        numBlinks,
+        blinkRand,
+        blinkSound = new Audio("audio/blinkSound.aiff");
+
 
     for (var i = 0; i < divText.length; i += 1) {
         newText += '<i id=l' + (i + 1) + '>' + divText.charAt(i) + '</i>';
@@ -26,51 +32,51 @@ $(document).ready(function () {
 
     $("#1").html(newText);
 
-    setInterval(function () {
-        if ($("#l1").is(":hover")) {
-            flicker(1);
-        }
-        else
-            $("#l1").removeClass("off");
+    function randomFromInterval(from, to) {
+        return Math.floor(Math.random() * (to - from + 1) + from);
+    }
 
-        if ($("#l2").is(":hover")) {
-            flicker(2);
-        }
-        else
-            $("#l2").removeClass("off");
-
-        if ($("#l3").is(":hover")) {
-            flicker(3);
-        }
-        else
-            $("#l3").removeClass("off");
-
-        if ($("#l4").is(":hover")) {
-            flicker(4);
-        }
-        else
-            $("#l4").removeClass("off");
-
-        if ($("#l5").is(":hover")) {
-            flicker(5);
-        }
-        else
-            $("#l5").removeClass("off");
-
-        if ($("#l6").is(":hover")) {
-            flicker(6);
-        }
-        else
-            $("#l6").removeClass("off");
-
-        if ($("#l7").is(":hover")) {
-            flicker(7);
-        }
-        else
-            $("#l7").removeClass("off");
-    }, 0);
-
-    function flicker(n) {
+    function toggleFlicker(n) {
         $("#l" + n).toggleClass("off");
     }
+
+    function checkHover() {
+        setInterval(function () {
+            for (var v = 1; v <= 7; v++) {
+
+                if ($("#l" + v).is(":hover")) {
+                    toggleFlicker(v);
+                }
+                else
+                    $("#l" + v).removeClass("off");
+            }
+        }, randomFromInterval(50, 100));
+    }
+
+    function randFlicker() {
+        counter += 1;
+
+        if (counter === numBlinks) {
+            return;
+        }
+
+        setTimeout(setInterval(function () {
+            toggleFlicker(randLetter + 1);
+        }, 0), 10);
+    }
+
+    (function loop() {
+        var randInterval = randomFromInterval(500, 1000);
+        randLetter = randomFromInterval(5, 6);
+
+        numBlinks = randomFromInterval(20, 30);
+
+        setTimeout(function () {
+            counter = 0;
+            randFlicker();
+            blinkRand = randomFromInterval(500, 750);
+            checkHover();
+            loop();
+        }, randInterval);
+    }());
 });
