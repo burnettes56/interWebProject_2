@@ -6,8 +6,7 @@ $(document).ready(function () {
         counter = 0,
         randLetter,
         numBlinks,
-        blinkRand,
-        blinkSound = new Audio("audio/blinkSound.aiff");
+        blinkRand;
 
 
     for (var i = 0; i < divText.length; i += 1) {
