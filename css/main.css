@@ -1,5 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Nixie+One');
 
+/*
+    Author : Hayden Burnette
+    File   : main.css
+    Date   : 4/19/2018
+    Mod    : 4/25/2018
+    Purpose: The purpose of this to demonstrate
+        how javaScript, jQuery,
+        and animations inside
+        of CSS3 can be used to
+        make unique elements
+        for a webpages.
+
+    This lab will make a
+    neon sign that flickers
+*/
+
 body, html {
     margin: 0;
     height: 100%;
@@ -7,13 +23,17 @@ body, html {
     display: table;
 }
 
+body {
+    background-image: url(../img/smoke.gif);
+    no-repeat: center center fixed;
+    background-size: cover;
+}
+
 div {
     display: table-cell;
     text-align: center;
     vertical-align: middle;
 }
-
-/*glow for webkit*/
 
 @-webkit-keyframes neon {
     from {
@@ -47,8 +67,6 @@ div {
     }
 }
 
-/*glow for mozilla*/
-
 @-moz-keyframes neon {
     from {
         text-shadow: 0 0 6px #fff,
@@ -80,8 +98,6 @@ div {
         text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.5);
     }
 }
-
-/*glow*/
 
 @keyframes neon {
     from {

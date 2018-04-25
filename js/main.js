@@ -1,3 +1,19 @@
+/*
+    Author : Hayden Burnette
+    File   : main.js
+    Date   : 4/19/2018
+    Mod    : 4/25/2018
+    Purpose: The purpose of this to demonstrate
+        how javaScript, jQuery,
+        and animations inside
+        of CSS3 can be used to
+        make unique elements
+        for a webpages.
+
+    This lab will make a
+    neon sign that flickers
+*/
+
 $(document).ready(function () {
     var divText = $("#1").text(),
         newText = '',
