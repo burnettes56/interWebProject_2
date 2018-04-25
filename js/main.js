@@ -10,8 +10,6 @@
         make unique elements
         for a webpages.
 
-    This lab will make a
-    neon sign that flickers
 */
 
 $(document).ready(function () {
